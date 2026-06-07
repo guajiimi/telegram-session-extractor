@@ -137,18 +137,18 @@ body {
   padding: 4px 0 2px; gap: 4px;
 }
 
-.thog-mark {
+.brand-mark {
   position: relative;
   display: inline-flex; align-items: center; justify-content: center;
 }
 
-.thog-svg {
+.brand-svg {
   width: 160px; height: auto;
   fill: var(--logo-color);
   transition: fill var(--trans);
 }
 
-.thog-svg .svg-cutout {
+.brand-svg .svg-cutout {
   fill: var(--bg);
   transition: fill var(--trans);
 }
