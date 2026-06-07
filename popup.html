@@ -3,72 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="noise"></div>
-
 <div class="container">
 
   <div class="topbar">
-    <div class="tg-pill">
-      <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 14.06l-2.945-.918c-.64-.203-.653-.64.136-.954l11.57-4.461c.537-.194 1.006.131.963.494z"/></svg>
-      Session Extractor
+    <div class="brand">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="tg-icon"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 14.06l-2.945-.918c-.64-.203-.653-.64.136-.954l11.57-4.461c.537-.194 1.006.131.963.494z"/></svg>
+      <span class="brand-text">Session Extractor</span>
     </div>
     <div class="topbar-controls">
-      <button class="lang-btn" id="langToggle" title="Switch language">
+      <button class="ctrl-btn" id="langToggle" title="Switch language">
         <span class="l-en">EN</span>
         <span class="l-id">ID</span>
       </button>
-      <button class="theme-btn" id="themeToggle">
+      <button class="ctrl-btn" id="themeToggle">
         <span class="t-dark">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <span data-i18n="dark">Dark</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </span>
         <span class="t-light">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
-          <span data-i18n="light">Light</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
         </span>
       </button>
     </div>
-  </div>
-
-  <div class="logo-wrap">
-    <div class="brand-mark">
-      <svg viewBox="0 0 260 80" class="brand-svg" xmlns="http://www.w3.org/2000/svg">
-        <!-- Telegram paper plane icon -->
-        <path d="M20 40 L80 15 L65 65 L45 50 L55 35 Z" fill="currentColor" opacity="0.9"/>
-        <path d="M45 50 L50 60 L55 35" fill="none" stroke="currentColor" stroke-width="2"/>
-        <!-- SESSION text -->
-        <text x="95" y="35" font-family="'Syne', sans-serif" font-weight="800" font-size="28" fill="currentColor">SESSION</text>
-        <!-- EXTRACTOR text -->
-        <text x="95" y="62" font-family="'DM Sans', sans-serif" font-weight="300" font-size="18" fill="currentColor" opacity="0.7">EXTRACTOR</text>
-      </svg>
-    </div>
-    <p class="logo-sub" data-i18n="subtitle">Telegram Mini App Session Data</p>
   </div>
 
   <div class="card">
 
     <nav class="tabs-nav">
-      <button class="tab-btn active" data-tab="user">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        <span data-i18n="tabUser">User</span>
-      </button>
-      <button class="tab-btn" data-tab="initdata">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        InitData
-      </button>
-      <button class="tab-btn" data-tab="token">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        <span data-i18n="tabToken">Token</span>
-      </button>
-      <button class="tab-btn" data-tab="iframe">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-        <span data-i18n="tabFrames">Frames</span>
-      </button>
+      <button class="tab-btn active" data-tab="user" data-i18n="tabUser">User</button>
+      <button class="tab-btn" data-tab="initdata">InitData</button>
+      <button class="tab-btn" data-tab="token" data-i18n="tabToken">Token</button>
+      <button class="tab-btn" data-tab="iframe" data-i18n="tabFrames">Frames</button>
     </nav>
 
     <div class="tab-body">
@@ -77,73 +46,67 @@
       <div class="tab-pane active" id="tab-user">
         <div class="field">
           <div class="field-head">
-            <span class="badge badge-u">id</span>
-            <span class="field-name">user_id</span>
+            <span class="field-label">user_id</span>
           </div>
           <div class="inp-row">
-            <input id="f-userId" readonly placeholder="——">
+            <input id="f-userId" readonly placeholder="—">
             <button class="copy-field" data-field="f-userId">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             </button>
           </div>
         </div>
         <div class="field">
           <div class="field-head">
-            <span class="badge badge-u">name</span>
-            <span class="field-name">first_name</span>
+            <span class="field-label">first_name</span>
           </div>
           <div class="inp-row">
-            <input id="f-firstName" readonly placeholder="——">
+            <input id="f-firstName" readonly placeholder="—">
             <button class="copy-field" data-field="f-firstName">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             </button>
           </div>
         </div>
         <div class="field">
           <div class="field-head">
-            <span class="badge badge-u">user</span>
-            <span class="field-name">username</span>
+            <span class="field-label">username</span>
           </div>
           <div class="inp-row">
-            <input id="f-username" readonly placeholder="——">
+            <input id="f-username" readonly placeholder="—">
             <button class="copy-field" data-field="f-username">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             </button>
           </div>
         </div>
         <div class="field">
           <div class="field-head">
-            <span class="badge badge-u">phone</span>
-            <span class="field-name">phone</span>
+            <span class="field-label">phone</span>
           </div>
           <div class="inp-row">
-            <input id="f-phone" readonly placeholder="——">
+            <input id="f-phone" readonly placeholder="—">
             <button class="copy-field" data-field="f-phone">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             </button>
           </div>
         </div>
         <div class="field">
           <div class="field-head">
-            <span class="badge badge-p">prem</span>
-            <span class="field-name">is_premium</span>
+            <span class="field-label">is_premium</span>
           </div>
           <div class="inp-row">
-            <input id="f-isPremium" readonly placeholder="——">
+            <input id="f-isPremium" readonly placeholder="—">
             <button class="copy-field" data-field="f-isPremium">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             </button>
           </div>
         </div>
         <div class="field">
           <div class="field-head">
-            <span class="badge badge-q">query</span>
-            <span class="field-name">query_id</span>
+            <span class="field-label">query_id</span>
           </div>
           <div class="inp-row">
-            <input id="f-queryId" readonly placeholder="——">
+            <input id="f-queryId" readonly placeholder="—">
             <button class="copy-field" data-field="f-queryId">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             </button>
           </div>
         </div>
@@ -181,16 +144,16 @@
     </div>
 
     <div class="btn-group">
-      <button class="btn-main" id="btnExtract">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <button class="btn-primary" id="btnExtract">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         <span data-i18n="extractAll">Extract All</span>
       </button>
-      <button class="btn-out" id="btnCopyAll">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      <button class="btn-secondary" id="btnCopyAll">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
         JSON
       </button>
-      <button class="btn-out" id="btnClear" title="Clear">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+      <button class="btn-ghost" id="btnClear" title="Clear">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
       </button>
     </div>
 
@@ -202,12 +165,9 @@
   </div>
 
   <div class="footer">
-    <a href="https://github.com/guajiimi/telegram-session-extractor" target="_blank">
-      <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-      GitHub
-    </a>
-    <span>·</span>
     <span>by <b>guajiimi</b></span>
+    <span class="footer-sep">·</span>
+    <a href="https://github.com/guajiimi/telegram-session-extractor" target="_blank">GitHub</a>
   </div>
 
 </div>
